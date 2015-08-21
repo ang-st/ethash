@@ -37,7 +37,7 @@ else()
 	list(APPEND FILES sha3.c sha3.h)
 endif()
 
-add_library(${LIBRARY} ${FILES})
+add_library(${LIBRARY} SHARED ${FILES})
 
 if (CRYPTOPP_FOUND)
 	TARGET_LINK_LIBRARIES(${LIBRARY} ${CRYPTOPP_LIBRARIES})
